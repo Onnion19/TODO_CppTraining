@@ -1,0 +1,6 @@
+## VS
+
+*.sln
+*.vcxproj
+.vs/
+
