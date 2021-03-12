@@ -1,7 +1,7 @@
 # TODO_CppTraining
 ## Como participar: 
 
-- Deberas **clonar** el proyecto en tu ordenador, hacer una **branch** y a partir de aquí desarrollar la solución al problema 
+- Deberas **clonar** el proyecto en tu ordenador, hacer una **branch** del ejercicio que querais realizar y a partir de aquí desarrollar la solución al problema 
 - Una vez tengas la solución deberás subir tu Branch al GitHub y crear una **pull request**. 
 
 - Si nunca has usado una versión de control: https://docs.github.com/en/desktop (también encontraras muchos tutoriales por internet)
