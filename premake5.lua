@@ -9,71 +9,6 @@ workspace "TodoCppTraining"
 	}
 
 
-outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-project "CppUtils"
-
-	location "Utils"
-	kind "Staticlib"
-	language "C++"
-	cppdialect "C++17"
-	staticruntime "On"
-	
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-
-
-
-	files
-	{
-		"Utils/*.cpp",
-		"Utils/Source/**.cpp",
-		"Utils/Source/**.c",
-		"Utils/Headers/**.h",
-		"Utils/*.h",
-		"Utils/Headers/**.hpp",
-		"Utils/ExternalInclude/**.h"
-	}
-
-	includedirs 
-	{
-		"Utils/Headers",
-		"Utils"
-	}
-
-
-	filter "system:windows"
-		systemversion "latest"
-
-		defines 
-		{
-		}
-
-	filter "configurations:Debug"
-		defines
-		{
-			"DEBUG"
-		}
-		symbols "On"
-
-	filter "configurations:Release"
-		defines
-		{
-			"RELEASE"
-		}
-		optimize "On"
-
-
-	filter "configurations:Distribution"
-		defines
-		{
-			"DISTRIBUTION"
-		}
-		optimize "Off"
-	
-
-	filter {"system:windows","configurations:Release"}
-		buildoptions "/MT"
-
 
 project "Exercises"
 	location "Exercises"
@@ -82,13 +17,8 @@ project "Exercises"
 	cppdialect "C++17"
 	staticruntime "On"
 	
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-	links
-	{
-		"CppUtils"
-	}
+	targetdir ("bin/")
+	objdir ("bin-int/")
 
 
 	files
@@ -100,11 +30,14 @@ project "Exercises"
 		"Exercises/**"
 
 	}
-
-	includedirs 
+	
+	
+	includedirs
 	{
-		"Utils/Headers"
+		"Exercises/Utils/Headers",
+		"Exercises/Header"
 	}
+	
 
 	filter "system:windows"
 		systemversion "latest"
