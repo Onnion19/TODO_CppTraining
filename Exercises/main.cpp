@@ -25,8 +25,12 @@ int main()
 
 	Utils::Timer chrono("Application"); //No eliminar o alterar esta linea
 
+	/*Codigo de ejemplo, porfavor eliminar*/
+		Ejemplo();
+	/*************************************/
+
 	//Tu codigo va aqui
-	Ejemplo();
+	
 	//
 
 	return 0;
