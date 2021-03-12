@@ -37,7 +37,7 @@ int main()
 }
 
 //Ejemplo de una implementacion muy basica (super basica)
-//Todo el codigo de ejemplo se puede eliminar
+//Se puede eliminar sin problema las funciones Atacar() y Ejemplo()
 
 void Atacar(int i)
 {
