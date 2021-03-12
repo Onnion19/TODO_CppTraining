@@ -1,8 +1,6 @@
 #include "Timer.h"
 #include "Header/Exercice1/Player.h"
-#include <iostream>
-#include <variant>
-#include <type_traits>
+
 
 /**
  * En este ejercicio eres un desarrollador que quiere que su jugador pueda llevar armas de distintos tipos: pistola , espada, arco. 
